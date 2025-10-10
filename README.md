@@ -17,3 +17,6 @@ strategies are possible, including
 as depicted in Figure 3. Each of these brings distinct advantages and disadvantages and will suit different needs.
  
 reference :
+
+## SOFTWARE: HYBRID ALGORITHM PROPERTIES
+
