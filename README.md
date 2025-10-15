@@ -1,22 +1,28 @@
 # Case-Study
 
- Although QC has certain advantages over classical computing in specific scenarios,it does not sup-
-port general computation well.Therefore,a general way to exploit QC is to treat quantum process-
-ing units (QPUs) as additional, complex accelerators that are utilized for certain computing tasks.
+Although quantum computing offers certain advantages over classical computing in specific scenarios, it is not yet well-suited for general-purpose computation. Therefore, a practical approach to leveraging quantum computing (QC) is to treat quantum processing units (QPUs) as specialized accelerators, utilized for particular computational tasks. In this project, I will discuss a hybrid high-performance computing (HPC) approach that integrates both classical and quantum resources.[3]
 
-Thus, a hybrid high performance computing will be discussed in this project.
+When considering the hardware interface between the HPC host system and the quantum accelerators, many strategies are possible, including remote access, on-premises (or co-located) integration, and on-node integration. Each of these brings distinct advantages and disadvantages and will suit different needs. In this project, I will choose the remote access strategy, which means IBM Quantum Computing (IBM Quantum Backend) will be used to simulate this process.
 
-When considering the hardware interface between the HPC host system and the quantum accelerators, many
-strategies are possible, including 
-1. remote access; As the name suggests, in a remote integration, the quantum accelerator is physically distant from the HPC host. In this scenario,
-  quantum computers could be hosted and maintained by the quantum hardware provider, which significantly lowers the adoption barrier. It also allows the
-  supercomputer to gain remote access to several different quantum computing technologies at a lower cost, which can be beneficial to some project.However,
-  data security and integrity provided by a third party as well as by the network connection could be critical problem for some users.
-2.  on-premises (or co-located) integration,
-3.  on-node integration,
-as depicted in Figure 3. Each of these brings distinct advantages and disadvantages and will suit different needs.
- 
-reference :
+In our exercise sessions, we have been using Python and Qiskit to explore quantum circuits. For this project, I plan to:
 
-## SOFTWARE: HYBRID ALGORITHM PROPERTIES
+1. Replace Qiskit with XACC, which is particularly well-suited for parallel computing and provides a more flexible framework for integrating HPC and QC. 
+
+2. Implement and compare the HHL algorithm and the VQLS algorithm to solve a specific linear equation. The HHL algorithm is one we have studied in class, and I will also implement the VQLS algorithm as described in reference [1].
+
+3. Consider the linear finite element method (FEM) equation AX=b, and compare the results obtained from classical algorithms and quantum algorithms.
+
+This project aims to explore the integration of quantum computing with classical high-performance computing, focusing on solving linear equations using quantum algorithms and comparing their performance with classical methods. For background information, an introduction and overview of the development of quantum algorithms can be found in reference [2], while a detailed description of the VQLS algorithm is provided in reference [1].Additionally, for the parallel computing aspects, the XACC framework is discussed in reference [4], and a comprehensive description of hybrid HPCQC approaches can be found in reference [3].
+
+
+
+
+# Reference :
+[1] CAPPANERA, Enrico. [*Variational quantum linear solver for finite element problems: A Poisson equation test case*](https://scholar.google.com/scholar_lookup?title=Variational%20quantum%20linear%20solver%20for%20finite%20element%20problems%3A%20A%20Poisson%20equation%20test%20case&author=E.%20Cappanera&publication_year=2021). Delft University of Technology, 2021.
+
+[2] RAO, Xiang. Performance study of variational quantum linear solver with an improved ansatz for reservoir flow equations. Physics of Fluids, 2024, 36. Jg., Nr. 4.
+
+[3] RUEFENACHT, Martin, et al. Bringing quantum acceleration to supercomputers. IQM/LRZ Technical Report, https://www. quantu m. lrz. de/fileadmin/QIC/Downloads/IQM HPC-QC-Integration-White paper. pdf, 2022.
+
+[4] MCCASKEY, Alexander J., et al. XACC: a system-level software infrastructure for heterogeneous quantum–classical computing. Quantum Science and Technology, 2020, 5. Jg., Nr. 2, S. 024002.
 
