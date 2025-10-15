@@ -1,0 +1,27 @@
+name: Build LaTeX PDF
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install TeX Live
+        run: sudo apt-get update && sudo apt-get install -y texlive-full python3-pygments
+
+      - name: Compile LaTeX with minted
+        run: pdflatex -shell-escape main.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-pdf
+          path: main.pdf
