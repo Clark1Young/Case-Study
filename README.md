@@ -12,7 +12,7 @@ In our exercise sessions, we have been using Python and Qiskit to explore quantu
 
 3. Consider the linear finite element method (FEM) equation AX=b, and compare the results obtained from classical algorithms and quantum algorithms.
 
-This project aims to explore the integration of quantum computing with classical high-performance computing, focusing on solving linear equations using quantum algorithms and comparing their performance with classical methods. For background information, an introduction and overview of the development of quantum algorithms can be found in reference [2], while a detailed description of the VQLS algorithm is provided in reference [1].Additionally, for the parallel computing aspects, the XACC framework is discussed in reference [4], and a comprehensive description of hybrid HPCQC approaches can be found in reference [3].
+This project aims to explore the integration of quantum computing with classical high-performance computing, focusing on solving linear equations using quantum algorithms and comparing their performance with classical methods. For background information, an introduction and overview of the development of quantum algorithms can be found in reference [2], while a detailed description of the VQLS algorithm is provided in reference [1].Additionally, for the parallel computing aspects, the XACC framework is discussed in reference [4], and a comprehensive description of hybrid HPCQC approaches can be found in reference [3][5][6].
 
 
 
@@ -25,4 +25,6 @@ This project aims to explore the integration of quantum computing with classical
 [3] RUEFENACHT, Martin, et al. Bringing quantum acceleration to supercomputers. IQM/LRZ Technical Report, https://www. quantu m. lrz. de/fileadmin/QIC/Downloads/IQM HPC-QC-Integration-White paper. pdf, 2022.
 
 [4] MCCASKEY, Alexander J., et al. XACC: a system-level software infrastructure for heterogeneous quantum–classical computing. Quantum Science and Technology, 2020, 5. Jg., Nr. 2, S. 024002.
+[5] Elsharkawy, A., Guo, X. and Schulz, M., 2024, September. Integration of quantum accelerators into hpc: Toward a unified quantum platform. In 2024 IEEE International Conference on Quantum Computing and Engineering (QCE) (Vol. 1, pp. 774-783). IEEE.
+[6] Elsharkawy, A., To, X.T.M., Seitz, P., Chen, Y., Stade, Y., Geiger, M., Huang, Q., Guo, X., Ansari, M.A., Mendl, C.B. and Kranzlmüller, D., 2025. Integration of quantum accelerators with high performance computing—a review of quantum programming tools. ACM Transactions on Quantum Computing, 6(3), pp.1-46.
 
